@@ -18,6 +18,13 @@ RUN cd /tmp ;\
     mv $PHANTOM_JS /usr/local/share ;\ 
     ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 
+RUN wget http://7xocud.dl1.z0.glb.clouddn.com/chromedriver_linux64.zip -P /tmp; \
+    unzip /tmp/chromedriver_linux64.zip /usr/local/share/chromedriver ;\
+    chmod +x /usr/local/share/chromedriver; \
+    ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver; \
+    ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+    
+
 RUN pip install -r /tmp/requirements.txt
 RUN pip install -i http://pypi.oneapm.com/simple --trusted-host pypi.oneapm.com --upgrade blueware
 
