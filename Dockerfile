@@ -19,10 +19,9 @@ RUN cd /tmp ;\
     ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 
 RUN wget http://7xocud.dl1.z0.glb.clouddn.com/chromedriver_linux64.zip -P /tmp; \
-    unzip /tmp/chromedriver_linux64.zip /usr/local/share/chromedriver ;\
-    chmod +x /usr/local/share/chromedriver; \
-    ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver; \
-    ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+    unzip /tmp/chromedriver_linux64.zip /usr/bin/chromedriver ;\
+    chmod +x /usr/bin/chromedriver; \
+    ln -s /usr/bin/chromedriver /usr/local/bin/chromedriver
     
 
 RUN pip install -r /tmp/requirements.txt
