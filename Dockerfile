@@ -8,7 +8,7 @@ RUN echo 'deb http://mirrors.aliyun.com/debian/ jessie main non-free contrib' > 
     'deb-src http://mirrors.aliyun.com/debian/ jessie main non-free contrib' >> /etc/apt/sources.list && echo \
     'deb-src http://mirrors.aliyun.com/debian/ jessie-proposed-updates main non-free contrib' >> /etc/apt/sources.list
 RUN apt-get update; \
-    apt-get install -y build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev libx11-dev libxext-dev wget unzip nodejs;\
+    apt-get install -y build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev libx11-dev libxext-dev wget unzip nodejs npm;\
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp ;\
